@@ -39,3 +39,6 @@ alias text='open -a TextEdit'
 alias pre='open -a Preview'
 alias cd..='cd ..'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+# append to history instead of overwrite
+shopt -s histappend
