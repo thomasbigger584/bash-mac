@@ -39,6 +39,19 @@ alias text='open -a TextEdit'
 alias pre='open -a Preview'
 alias cd..='cd ..'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias f='open -a Finder ./'
+trash () { command mv "$@" ~/.Trash ; }  # Moves a file to the MacOS trash
+ql () { qlmanage -p "$*" >& /dev/null; } # Opens any file in MacOS Quicklook Preview
+
+#   showa: to remind yourself of an alias (given some part of it)
+showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
+
+#   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
+#           displays paginated result with colored search terms and two lines surrounding each hit.             Example: mans mplayer codec
+#   --------------------------------------------------------------------
+mans () {
+    man $1 | grep -iC2 --color=always $2 | less
+}
 
 # append to history instead of overwrite
 shopt -s histappend
