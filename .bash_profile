@@ -11,6 +11,8 @@ export ANDROID_HOME=$ANDROID_SDK
 
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
+export PATH=$PATH:/Users/thomasbigger/Desktop/flutter/bin
+
 # Finder: show hidden files
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
