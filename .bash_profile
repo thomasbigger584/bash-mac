@@ -10,7 +10,6 @@ export ANDROID_ROOT=$ANDROID_SDK
 export ANDROID_HOME=$ANDROID_SDK
 
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
 export PATH=$PATH:/Users/thomasbigger/Desktop/flutter/bin
 
 # Finder: show hidden files
@@ -57,3 +56,9 @@ mans () {
 
 # append to history instead of overwrite
 shopt -s histappend
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc' ]; then source '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc'; fi
