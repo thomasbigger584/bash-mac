@@ -41,6 +41,7 @@ alias pre='open -a Preview'
 alias cd..='cd ..'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias f='open -a Finder ./'
+alias k='kubectl'
 trash () { command mv "$@" ~/.Trash ; }  # Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; } # Opens any file in MacOS Quicklook Preview
 
@@ -57,8 +58,9 @@ mans () {
 # append to history instead of overwrite
 shopt -s histappend
 
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc' ]; then source '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc' ]; then . '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc'; fi
