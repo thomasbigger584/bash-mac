@@ -12,6 +12,8 @@ export ANDROID_HOME=$ANDROID_SDK
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/Users/thomasbigger/Desktop/flutter/bin
 
+export PATH=$PATH:/usr/local/mysql/bin
+
 # Finder: show hidden files
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
@@ -42,6 +44,7 @@ alias cd..='cd ..'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias f='open -a Finder ./'
 alias k='kubectl'
+alias dnsclear='sudo killall -HUP mDNSResponder'
 trash () { command mv "$@" ~/.Trash ; }  # Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; } # Opens any file in MacOS Quicklook Preview
 
@@ -64,3 +67,8 @@ if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc' ]; then . '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc'; fi
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+export PATH
