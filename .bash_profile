@@ -34,6 +34,7 @@ export GREP_COLOR='1;35;40'
 alias reload='source ~/.bash_profile'
 
 # Bash
+alias cp='rsync -aP'
 alias ls='ls -laghFG'
 alias ll='ls -laghFG'
 alias l='ls -laghFG'
@@ -72,3 +73,19 @@ if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc' ]; th
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/thomasbigger/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/Users/thomasbigger/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/thomasbigger/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/Users/thomasbigger/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
