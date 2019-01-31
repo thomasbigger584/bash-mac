@@ -2,7 +2,7 @@ export EDITOR=nano
 
 export PATH=$PATH:.
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 export PATH=$PATH:$JAVA_HOME
 
 export ANDROID_SDK=/Users/thomasbigger/Library/Android/sdk
