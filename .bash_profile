@@ -69,5 +69,8 @@ if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/path.bash.inc' ]; then . '
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc'; fi
 
+export PATH='/Users/thomasbigger/Library/Python/3.6/bin':$PATH
+export PATH=$HOME/bin:$PATH
+
 # added by Anaconda3 4.2.0 installer
 export PATH="/Users/thomasbigger/anaconda/bin:$PATH"
