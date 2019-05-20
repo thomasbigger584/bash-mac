@@ -10,7 +10,6 @@ export ANDROID_ROOT=$ANDROID_SDK
 export ANDROID_HOME=$ANDROID_SDK
 
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/Users/thomasbigger/Desktop/flutter/bin
 
 export PATH=$PATH:/usr/local/mysql/bin
 
@@ -46,6 +45,16 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias f='open -a Finder ./'
 alias k='kubectl'
 alias dnsclear='sudo killall -HUP mDNSResponder'
+
+alias ionicw='docker run --rm -v $(pwd):/ionicapp -p 8100:8100 ionic-builder:latest'
+
+
+ask () { read -p "Continue (y/n)?" CONT; if [ "$CONT" = "y" ]; then "$@"; else echo "exiting"; fi; }
+
+alias mvnwclr='ask ./mvnw clean compile liquibase:dropAll spring-boot:run'
+alias gitfc='ask git add . && git reset --hard head && git clean -i -f'
+
+
 trash () { command mv "$@" ~/.Trash ; }  # Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; } # Opens any file in MacOS Quicklook Preview
 
