@@ -48,8 +48,7 @@ alias dnsclear='sudo killall -HUP mDNSResponder'
 
 alias ionicw='docker run --rm -v $(pwd):/ionicapp -p 8100:8100 ionic-builder:latest'
 
-
-ask () { read -p "Continue (y/n)?" CONT; if [ "$CONT" = "y" ]; then "$@"; else echo "exiting"; fi; }
+ask () { read -p "Are you sure? (y/n)? " CONT; if [ "$CONT" = "y" ]; then "$@"; else echo "exiting"; fi; }
 
 alias mvnwclr='ask ./mvnw clean compile liquibase:dropAll spring-boot:run'
 alias gitfc='ask git add . && git reset --hard head && git clean -i -f'
