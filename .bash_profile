@@ -82,3 +82,7 @@ export PATH=$HOME/bin:$PATH
 
 # added by Anaconda3 4.2.0 installer
 export PATH="/Users/thomasbigger/anaconda/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/thomasbigger/.sdkman"
+[[ -s "/Users/thomasbigger/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/thomasbigger/.sdkman/bin/sdkman-init.sh"
