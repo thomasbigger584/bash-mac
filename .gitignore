@@ -5,3 +5,6 @@
 !.gitignore
 !.bash_profile
 !.bash_rc
+
+!.oh-my-zsh
+!.zshrc

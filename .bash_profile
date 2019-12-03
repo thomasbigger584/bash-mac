@@ -80,9 +80,9 @@ if [ -f '/Users/thomasbigger/Desktop/google-cloud-sdk/completion.bash.inc' ]; th
 export PATH='/Users/thomasbigger/Library/Python/3.6/bin':$PATH
 export PATH=$HOME/bin:$PATH
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/thomasbigger/anaconda/bin:$PATH"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/thomasbigger/.sdkman"
 [[ -s "/Users/thomasbigger/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/thomasbigger/.sdkman/bin/sdkman-init.sh"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+export ANDROID_HOME=/usr/local/share/android-sdk
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
